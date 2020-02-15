@@ -9,8 +9,8 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@master
       - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@dev
+        uses: textbook/git-checkout-submodule-action@master
       - name: Up all services
         run: docker-compose up
