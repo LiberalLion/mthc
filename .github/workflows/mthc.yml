@@ -6,7 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
     steps:
       - name: Checkout code
         uses: actions/checkout@master
@@ -14,3 +13,5 @@ jobs:
         uses: textbook/git-checkout-submodule-action@master
       - name: Up all services
         run: docker-compose up
+      - name: Check running services
+        run: docker-compose ps
