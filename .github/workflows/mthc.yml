@@ -1,0 +1,16 @@
+name: Test build
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@dev
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@dev
+      - name: Up all services
+        run: docker-compose up
