@@ -11,7 +11,5 @@ jobs:
         uses: actions/checkout@master
       - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
-      - name: Up all services
-        run: docker-compose up
-      - name: Check running services
-        run: docker-compose ps
+      - name: Build all services
+        run: docker-compose build
