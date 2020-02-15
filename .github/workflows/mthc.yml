@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout code
-        uses: actions/checkout@dev
+        uses: actions/checkout@v1
       - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@dev
       - name: Up all services
